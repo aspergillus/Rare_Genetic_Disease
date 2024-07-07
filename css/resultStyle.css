@@ -1,0 +1,39 @@
+.tbTil{
+    text-align: center;
+    background: #ccffff;
+    border: 1px solid #020202;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mnTble {
+    font-family: Verdana, Geneva, sans-serif;
+    margin-bottom: 1px;
+    text-align-last: center;
+    border-collapse: collapse;
+    display: block;
+}
+
+.mnTble td,
+.mnTble th {
+    border: 1px solid black;
+    padding: 10px 16px;
+    width: 1%;
+    text-align: center;
+}
+
+.mnTble tr:hover {
+    background-color: #ddd;
+}
+
+.mnTble th {
+    background-color: #ccffff;
+}
+
+.mnTble th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}

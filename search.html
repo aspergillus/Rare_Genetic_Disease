@@ -1,0 +1,265 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset= UTF-8" />
+    <title>Rare Disease Database</title>
+    <script src="SpryAssets/SpryMenuBar.js" type="text/javascript">
+        function goToNewPage() {
+            var url = document.getElementById('list').value;
+            if (url != 'none') {
+                window.location = url;
+            }
+        }
+    </script>
+    <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <table width="1150" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td>
+                <div id="wrapper">
+                    <div id="left">
+                        <img src="./img/logo.jpg" width="170" height="135" style="margin: auto 35px;" />
+                        <h1 class="titleLogo">Joints<br> to <br> Genes</h1>
+                    </div>
+                    <!-- <div id="left" align="center"><h1 class="titleLogo">Rare Disease <br>Database</h1></div> -->
+                    <div id="right"></div>
+                </div>
+
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;">
+                    <tr bgcolor="#00cccc">
+                        <td colspan="3">
+                            <ul id="MenuBar1" class="MenuBarHorizontal">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="search.html">Search</a></li>
+                                <li><a href="links.html">Links</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td align="left">
+                <table width="98%" align="center" id="mdTable" style="font-size:12px;">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" align="center" cellpadding="6" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <p align="center">&nbsp;</p>
+                                        <h2 align="center">Search</h2>
+                                        <table width="98%" border="0" align="center" cellpadding="5" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    <table width="98%" border="0" align="center" cellpadding="5"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="middle">
+                                                                <table width="100%" border="0" cellspacing="0"
+                                                                    cellpadding="5">
+                                                                    <tr>
+                                                                        <td height="61">
+                                                                            <table width="968" align="center"
+                                                                                id="dataTable" cellpadding="0"
+                                                                                cellspacing="0">
+                                                                                <tr>
+                                                                                    <td width="50%" align="center">
+                                                                                        <select class="selType"
+                                                                                            id="selTypeID">
+                                                                                            <option value=""
+                                                                                                disabled="disabled"
+                                                                                                selected="selected">
+                                                                                                Please select the field
+                                                                                            </option>
+                                                                                            <option value="disease">
+                                                                                                Disease</option>
+                                                                                            <option value="gene">Gene
+                                                                                            </option>
+                                                                                            <option value="variant">SNP
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                    <td width="50%" align="center">
+                                                                                        <div class="autocomplete"
+                                                                                            style="width:300px;">
+                                                                                            <input id="all_Input"
+                                                                                                class="main-InputCls"
+                                                                                                type="text"
+                                                                                                name="disease"
+                                                                                                placeholder="Search for keyword"
+                                                                                                disabled>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="searExple"> 
+                                                                            <div>
+                                                                                <label>Search keyword example: </label>
+                                                                            </div>
+                                                                            <div>
+                                                                                &ensp;<label><a href="result.html?disease=Hip%20dysplasia,%20Beukes%20type">Hip dysplasia, Beukes type</a>, </label>
+                                                                                <label><a href="result.html?gene=UFSP2">UFSP2</a>, </label>
+                                                                                <label><a href="result.html?variant=rs1554022725">rs1554022725</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="text-align-last: center;">
+                                                                            <input type="submit" class="main-SubmitCls"
+                                                                                id="searchSubmit" value="Search"
+                                                                                disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr bgcolor="#ccffff" height="80">
+            <td>
+                <p align="center" class="style13"></p>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {
+            imgDown: "SpryAssets/SpryMenuBarDownHover.gif",
+            imgRight: "SpryAssets/SpryMenuBarRightHover.gif"
+        });
+    </script>
+</body>
+</html>
+
+<script src="js/jquery_3.2.1.js"></script>
+
+<script>
+    var select = document.getElementById('selTypeID');
+    var inputVal = document.getElementById('all_Input');
+    var submitButton = document.getElementById('searchSubmit');
+    select.addEventListener('change', () => {
+        if (select.value === '0') {
+            inputVal.disabled = true;
+            $(inputVal).css('cursor', 'not-allowed');
+            submitButton.disabled = true;
+        } else {
+            inputVal.disabled = false;
+            submitButton.disabled = false;
+            $.ajax({                            // SQL Query using ajax
+                url: './cgi/list.cgi',
+                data: {
+                    'sel_query': select.value
+                },
+                dataType: 'text',
+                success: function (data) {
+                    var al_Input = [];
+                    data = JSON.parse(data);
+                    Object.keys(data).forEach(function (key) {
+                      al_Input.push(data[key][0]);
+                    });
+                    autocomplete(document.getElementById("all_Input"), al_Input);
+                }
+            });
+        }
+    });
+
+    $('#searchSubmit').click(function () {
+        if (inputVal.value != '') {
+            window.location.href = `result.html?${select.value}=${inputVal.value}`;
+        } else {
+            alert('Please enter the keyword');
+            return false;
+        }
+    });
+
+    function autocomplete(inp, arr) {
+        var currentFocus;
+        inp.addEventListener("input", function (e) {
+            var a, b, i, val = this.value;
+            closeAllLists();
+            if (!val) {
+                return false;
+            }
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            this.parentNode.appendChild(a);
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    b = document.createElement("DIV");
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    b.addEventListener("click", function (e) {
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        inp.addEventListener("keydown", function (e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                currentFocus++;
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                currentFocus--;
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+
+        // Function One
+        function addActive(x) {
+            if (!x) return false;
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+
+        //function two 
+        function removeActive(x) {
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+
+        // function three
+        function closeAllLists(elmnt) {
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+</script>
